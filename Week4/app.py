@@ -23,7 +23,9 @@ from sentence_transformers import SentenceTransformer
 
 load_dotenv()
 
-VECTORSTORE_DIR = Path("vectorstore")
+BASE_DIR = Path(__file__).resolve().parent
+
+VECTORSTORE_DIR = BASE_DIR / "vectorstore"
 INDEX_PATH = VECTORSTORE_DIR / "index.faiss"
 METADATA_PATH = VECTORSTORE_DIR / "metadata.pkl"
 
